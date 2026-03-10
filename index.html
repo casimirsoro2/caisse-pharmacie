@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>PRIX DES MÉDICAMENTS</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- SPLASH -->
+<div id="splash">
+  <img src="logo.png" class="logo" alt="Logo">
+  <div class="loader-dots">
+    <span></span><span></span><span></span>
+  </div>
+</div>
+
+<!-- COMPTEUR -->
+<div id="medCounter"></div>
+
+<!-- HEADER -->
+<div id="header">
+  <img src="logo.png" class="logo-small" alt="Logo">
+
+  <div class="search-container">
+
+    <input type="text" id="search" placeholder="Rechercher un médicament...">
+
+    <span id="clearBtn">✖</span>
+
+    <div id="suggestions"></div>
+
+  </div>
+</div>
+
+<!-- CONTENU -->
+<div id="app-container">
+
+  <div id="app">
+    <ul id="medList"></ul>
+  </div>
+
+  <div id="alphabetMenu"></div>
+
+</div>
+
+
+<!-- BIG LETTER -->
+<div id="bigLetter"></div>
+  
+<div id="factureBox">
+
+<h3 id="toggleFacture">🧾 Facture patient ⬆</h3>
+
+<ul id="factureList"></ul>
+
+<div id="factureTotal">Total : 0 FCFA</div>
+
+<button id="resetFacture">Réinitialiser</button>
+
+</div>
+  
+<!-- FOOTER -->
+<footer style="text-align:center;margin-top:20px;font-size:14px;color:#555;">
+Développé par Casimir SORO (Infirmier)<br>
+WhatsApp : +225 07 59 14 54 65
+</footer>
+
+<script src="script.js"></script>
+<script>
+if("serviceWorker" in navigator){
+navigator.serviceWorker.register("service-worker.js");
+}
+</script>
+
+</body>
+</html>
