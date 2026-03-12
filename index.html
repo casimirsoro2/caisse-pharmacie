@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prix Médicaments</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= SPLASH ================= -->
+
+<div id="splash">
+
+    <div class="splashContent">
+
+        <img src="logo.png" class="splashLogo">
+
+        <div class="splashTitle">CAISSE PHARMACIE</div>
+
+        <div class="splashSubtitle">Gestion des médicaments</div>
+
+        <div class="loaderDots">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= HEADER ================= -->
+
+<div id="appHeader">
+
+    <img src="logo.png" class="appLogo">
+
+    <div class="appText">
+        <div class="appTitle">CAISSE PHARMACIE</div>
+        <div class="appSubtitle">Gestion des médicaments</div>
+    </div>
+
+    <div id="themeBtn">🌙</div>
+
+</div>
+
+
+<!-- ================= RECHERCHE ================= -->
+
+<div class="search-box">
+
+<input type="text" id="search" placeholder="Rechercher un médicament...">
+
+<span id="clearBtn">❌</span>
+
+</div>
+
+<div id="medCounter"></div>
+
+
+<!-- ================= CONTENEUR PRINCIPAL ================= -->
+
+<div id="container">
+
+<ul id="medList"></ul>
+
+<div id="alphabetMenu"></div>
+
+</div>
+
+
+<!-- ================= GROSSE LETTRE ================= -->
+
+<div id="bigLetter"></div>
+
+
+<!-- ================= FACTURE ================= -->
+
+<div id="factureBox">
+
+<h2>🧾 FACTURE CLIENT</h2>
+
+<ul id="factureList"></ul>
+
+<div id="factureTotal">Total : 0 FCFA</div>
+
+<button id="resetFacture">Réinitialiser</button>
+
+</div>
+
+
+<!-- ================= JS ================= -->
+
+<script src="script.js"></script>
+
+</body>
+</html>
