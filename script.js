@@ -1,3 +1,44 @@
+function normaliser(txt){
+return txt
+.toLowerCase()
+.normalize("NFD")
+.replace(/[\u0300-\u036f]/g,"");
+}
+
+function levenshtein(a, b){
+
+a = a.toLowerCase();
+b = b.toLowerCase();
+
+const matrix = [];
+
+for(let i=0;i<=b.length;i++){
+matrix[i] = [i];
+}
+
+for(let j=0;j<=a.length;j++){
+matrix[0][j] = j;
+}
+
+for(let i=1;i<=b.length;i++){
+for(let j=1;j<=a.length;j++){
+
+if(b.charAt(i-1) === a.charAt(j-1)){
+matrix[i][j] = matrix[i-1][j-1];
+}else{
+matrix[i][j] = Math.min(
+matrix[i-1][j-1] + 1,
+matrix[i][j-1] + 1,
+matrix[i-1][j] + 1
+);
+}
+
+}
+}
+
+return matrix[b.length][a.length];
+
+}
 // ================= FONCTION VIBRATION =================
 function vibrer(){
 if(navigator.vibrate){
@@ -23,7 +64,7 @@ const medicaments = [
 {name:"CAPTOPRIL COMPRIMES",price:800,unit:"PLAQUETTE"},
 {name:"CARBOCISTEINE SIROP 2%",price:1500,unit:"BOITE"},
 {name:"CARBOCISTEINE SIROP 5%",price:1500,unit:"BOITE"},
-{name:"CEFTRIAXONE 1G INJECTION",price:1500,unit:"AMPOULE"},
+{name:"CEFTRIAXONE 1G INJECTION",price:2000,unit:"AMPOULE"},
 {name:"CIMETIDINE 200MG INJ",price:800,unit:"AMPOULE"},
 {name:"CIPROFLOXACINE CP 500MG",price:1200,unit:"PLAQUETTE"},
 {name:"CIPROFLOXACINE CP 750MG",price:1700,unit:"PLAQUETTE"},
@@ -337,7 +378,11 @@ total += valeur;
 });
 
 factureTotal.innerText = "Total : " + total + " FCFA";
-    
+    factureTotal.style.transform="scale(1.08)";
+
+setTimeout(()=>{
+factureTotal.style.transform="scale(1)";
+},150);
 
 }
 
@@ -363,34 +408,35 @@ search.addEventListener("input", function(){
 
 let valeur = this.value.toLowerCase();
 
+// afficher ou cacher le bouton ❌
 clearBtn.style.display = valeur ? "block" : "none";
 
+// filtrer médicaments
 let resultat = medicaments.filter(med =>
 med.name.toLowerCase().includes(valeur)
 );
 
 afficherListe(resultat);
 
-
 // suggestions
-
-suggestions.innerHTML="";
+suggestions.innerHTML = "";
 
 if(valeur){
 
 resultat.slice(0,5).forEach(med=>{
 
-let div=document.createElement("div");
+let div = document.createElement("div");
 
-div.className="suggestion";
+div.className = "suggestion";
 
-div.textContent=med.name;
+div.textContent = med.name;
 
-div.onclick=()=>{
+div.onclick = ()=>{
 
-search.value=med.name;
+search.value = med.name;
+clearBtn.style.display = "block";
 
-suggestions.innerHTML="";
+suggestions.innerHTML = "";
 
 ajouterFacture(med);
 
@@ -403,8 +449,6 @@ suggestions.appendChild(div);
 }
 
 });
-
-
 // ================= CLEAR =================
 
 clearBtn.onclick = ()=>{
@@ -573,7 +617,55 @@ adapterEcran();
 
 // lancer si l'écran change
 window.addEventListener("resize", adapterEcran);
+// ================= FACTURE COULISSANTE =================
 
+const factureBox = document.getElementById("factureBox");
+
+let startY = 0;
+
+factureBox.addEventListener("touchstart",(e)=>{
+
+startY = e.touches[0].clientY;
+
+});
+
+factureBox.addEventListener("touchmove",(e)=>{
+
+let currentY = e.touches[0].clientY;
+
+let diff = startY - currentY;
+
+// glisser vers le haut
+if(diff > 50){
+factureBox.classList.add("open");
+}
+
+// glisser vers le bas
+if(diff < -50){
+factureBox.classList.remove("open");
+}
+
+});
+function nettoyerTexte(txt){
+
+return txt
+.toLowerCase()
+.normalize("NFD")
+.replace(/[\u0300-\u036f]/g,"") // enlève accents
+.replace(/[^a-z0-9]/g,"");
+
+}
+const factureListScroll = document.getElementById("factureList");
+
+if(factureListScroll){
+
+factureListScroll.addEventListener("touchmove", function(e){
+
+e.stopPropagation();
+
+}, { passive:true });
+
+}
 // ================= LANCEMENT =================
 
 afficherListe(medicaments);
