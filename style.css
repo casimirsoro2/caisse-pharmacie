@@ -62,7 +62,7 @@ padding:10px 15px;
 
 background:inherit;
 
-z-index:999;
+z-index:100;
 
 }
 #search{
@@ -80,6 +80,7 @@ right:110px;
 top:50%;
 transform:translateY(-50%);
 cursor:pointer;
+  color:#888;
 font-size:18px;
   display:none;
 }
@@ -190,26 +191,43 @@ background:#f5f5f5;
 /* ================= FACTURE ================= */
 
 #factureBox{
-
 position:fixed;
-
 bottom:0;
-
 left:0;
-
 width:100%;
-
-height:140px;   /* un peu plus bas */
+height:220px;
 
 background:white;
-
 border-top:2px solid #ddd;
+box-shadow:0 -3px 10px rgba(0,0,0,0.1);
 
-overflow-y:auto;
+display:flex;
+flex-direction:column;
 
-padding:6px 10px;   /* moins d'espace */
-
+padding:10px;
 box-sizing:border-box;
+}
+
+/* facture ouverte */
+
+#factureBox.open{
+
+height:70%;
+
+}
+
+/* barre pour glisser */
+
+#factureHandle{
+
+width:40px;
+height:5px;
+
+background:#ccc;
+
+border-radius:5px;
+
+margin:6px auto;
 
 }
 
@@ -220,23 +238,43 @@ margin:0;
 font-size:16px;
 
 font-weight:bold;
-
+z-index: 2000;
 }
 
 #factureList{
+flex:1;
+overflow-y:auto;
 list-style:none;
 padding:0;
-margin:10px 0;
+margin:5px 0;
+}
+#factureList{
+flex:1;
+overflow-y:auto;
+-webkit-overflow-scrolling:touch;
+}
+#factureList li{
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+
+gap:10px;
+
+padding:8px 5px;
+
+border-bottom:1px solid #eee;
+
+font-size:13px;
+
 }
 
-#factureList li{
-display:flex;
-justify-content:space-between;
-align-items:center;
-gap:8px;
-font-size:13px;
-border-bottom:1px solid #eee;
-padding:6px 0;
+.factName{
+
+flex:1;
+
+padding-left:6px;
+
 }
 
 .qtyBox{
@@ -263,9 +301,17 @@ font-weight:bold;
 }
 
 .remove{
+
 color:red;
-font-size:18px;
+
 cursor:pointer;
+
+font-size:18px;
+
+padding-left:6px;
+
+padding-right:6px;
+
 }
 
 #factureTotal{
@@ -285,7 +331,7 @@ padding:5px 10px;
 border-radius:8px;
 
 display:inline-block;
-
+transition:transform 0.15s;
 }
 
 #resetFacture{
@@ -305,7 +351,7 @@ font-size:14px;
 
 position:fixed;
 
-right:5px;
+right:0px;
 
 /* juste sous la barre de recherche */
 top:8px;
@@ -351,7 +397,9 @@ font-size:11px;
 line-height:14px;
 
 }
-
+#container{
+padding-right:40px;
+}
 /* ================= GROSSE LETTRE ================= */
 
 #bigLetter{
@@ -388,8 +436,8 @@ opacity:1;
 
 #topBtn{
 position:fixed;
+  right: 47px;
 bottom:260px;
-left:5px;
 width:40px;
 height:40px;
 background:#1976d2;
@@ -557,9 +605,13 @@ margin-left:6px;
 /* unité dans facture */
 
 .factUnit{
+
 font-size:12px;
-color:#888;
-margin-left:5px;
+
+color:#777;
+
+margin-left:6px;
+
 }
 
 /* ================= HEADER LOGO ================= */
@@ -932,4 +984,55 @@ font-size:14px;
 height:140px;
 }
 
+}
+#alphabetMenu{
+transition:opacity 0.2s;
+}
+
+/* facture toujours au-dessus */
+
+#factureBox{
+z-index:2000;
+}
+
+/* alphabet normal */
+
+#alphabetMenu{
+z-index:500;
+transition:opacity 0.2s;
+}
+
+/* cacher alphabet quand facture ouverte */
+
+#factureBox.open ~ #container #alphabetMenu{
+opacity:0;
+pointer-events:none;
+}
+#factureBox.open{
+box-shadow:0 -5px 20px rgba(0,0,0,0.3);
+}
+
+#factureBox{
+padding:15px;
+box-sizing:border-box;
+}
+
+#factureTotal{
+margin:10px 5px;
+padding:10px;
+border-radius:10px;
+}
+
+#resetFacture{
+margin:10px 5px;
+width:calc(100% - 10px);
+}
+#alphabetMenu{
+z-index:1500;
+}
+#factureList{
+flex:1;
+overflow-y:auto;
+-webkit-overflow-scrolling:touch;
+overscroll-behavior: contain;
 }
