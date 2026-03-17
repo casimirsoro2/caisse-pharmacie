@@ -52,67 +52,78 @@ const medicaments = [
 {name:"ALBEN 400MG CP",price:500,unit:"COMPRIME"},
 {name:"ALLERCET 10MG CP",price:2500,unit:"BOITE"},
 {name:"AMOXICIILINE SUSP BUV 250MG",price:1500,unit:"BOITE"},
-{name:"AMOXICILLINE 1G INJECTION",price:1500,unit:"AMPOULE"},
-{name:"AMOXICILLINE GELULES 500MG",price:800,unit:"PLAQUETTE"},
-{name:"AMPICILLINE 1G INJECTION",price:1500,unit:"AMPOULE"},
-{name:"ARTEMETHER 80MG INJ",price:700,unit:"AMPOULE"},
+{name:"AMOXICILLINE 1G INJECTION",price:1000,unit:"AMPOULE"},
+{name:"AMOXICILLINE GELULES 500MG",price:750,unit:"PLAQUETTE"},
+{name:"AMPICILLINE 1G INJECTION",price:1000,unit:"AMPOULE"},
+{name:"ARTEMETHER 80MG INJ",price:500,unit:"AMPOULE"},
 {name:"AUREOMYCINE 3% POMMADE",price:1500,unit:"TUBE"},
 {name:"AZITHROMICYNE 500MG CP",price:3500,unit:"BOITE"},
 {name:"BANDE DE CREPE",price:1000,unit:"ROULEAU"},
 {name:"BETADINE 125ML",price:1500,unit:"FLACON"},
 {name:"CALCIUM INJ",price:1500,unit:"AMPOULE"},
-{name:"CAPTOPRIL COMPRIMES",price:800,unit:"PLAQUETTE"},
-{name:"CARBOCISTEINE SIROP 2%",price:1500,unit:"BOITE"},
-{name:"CARBOCISTEINE SIROP 5%",price:1500,unit:"BOITE"},
-{name:"CEFTRIAXONE 1G INJECTION",price:2000,unit:"AMPOULE"},
-{name:"CIMETIDINE 200MG INJ",price:800,unit:"AMPOULE"},
-{name:"CIPROFLOXACINE CP 500MG",price:1200,unit:"PLAQUETTE"},
-{name:"CIPROFLOXACINE CP 750MG",price:1700,unit:"PLAQUETTE"},
+{name:"CAPTOPRIL COMPRIMES",price:1000,unit:"PLAQUETTE"},
+{name:"CARBOCISTEINE SIROP 2%",price:1500,unit:"FLACON"},
+{name:"CARBOCISTEINE SIROP 5%",price:1500,unit:"FLACON"},
+{name:"CEFTRIAXONE 1G INJECTION",price:1500,unit:"AMPOULE"},
+{name:"CIMETIDINE 200MG INJ",price:500,unit:"AMPOULE"},
+{name:"CIPROFLOXACINE CP 500MG",price:1500,unit:"PLAQUETTE"},
+{name:"CIPROFLOXACINE CP 750MG",price:2000,unit:"PLAQUETTE"},
 {name:"CODOLIPRANE 400/20MG",price:2500,unit:"BOITE"},
-{name:"DEXAMETHASONE 4MG INJECTION",price:800,unit:"AMPOULE"},
+{name:"DEXAMETHASONE 4MG INJECTION",price:500,unit:"AMPOULE"},
 {name:"DIAZEPAM 10MG INJECTION",price:1000,unit:"AMPOULE"},
-{name:"DICLOFENAC 75MG INJECTION",price:800,unit:"AMPOULE"},
-{name:"DICLOFENAC COMPRIMES 50MG",price:800,unit:"PLAQUETTE"},
+{name:"DICLOFENAC 75MG INJECTION",price:500,unit:"AMPOULE"},
+{name:"DICLOFENAC COMPRIMES 50MG",price:500,unit:"PLAQUETTE"},
 {name:"DICLOFENAC GEL",price:1000,unit:"BOITE"},
 {name:"DICYNONE 250MG INJ",price:1500,unit:"AMPOULE"},
-{name:"DOXYCYCLINE GELULES 100MG",price:800,unit:"PLAQUETTE"},
+{name:"DOXYCYCLINE GELULES 100MG",price:1000,unit:"PLAQUETTE"},
 {name:"DROTAVERINE 40MG INJECTION",price:800,unit:"AMPOULE"},
 {name:"ECOREX 150 MG OVULES B/3",price:2000,unit:"PLAQUETTE"},
 {name:"FERROFIT SIROP 200ML",price:2000,unit:"FLACON"},
-{name:"FIL DE SUTURE",price:1500,unit:"UNITE"},
+{name:"FIL DE SUTURE",price:2000,unit:"UNITE"},
 {name:"FLUCAZOL 50MG/5ML SIROP 60ML",price:3000,unit:"FLACON"},
 {name:"FLUCLOXACILLINE 250MG SUSP",price:2500,unit:"BOITE"},
-{name:"FLUCONAZOLE 150MG COMPRIME",price:750,unit:"AMPOULE"},
-{name:"FUROSEMIDE COMPRIMES 40MG",price:800,unit:"PLAQUETTE"},
+{name:"FLUCONAZOLE 150MG COMPRIME",price:750,unit:"COMPRIME"},
+{name:"FUROSEMIDE COMPRIMES 40MG",price:1000,unit:"PLAQUETTE"},
 {name:"GANT D'EXAMEN LATEX PQT/100",price:4500,unit:"BOITE"},
-{name:"GENTA COLLYRE",price:2000,unit:"BOITE"},
+{name:"GENTA COLLYRE",price:1500,unit:"BOITE"},
 {name:"GENTAMICINE 80MG INJ",price:500,unit:"AMPOULE"},
 {name:"HPV (HYDROSOL POLYVITAMINE) INJ",price:500,unit:"AMPOULE"},
 {name:"KETOCONAZOLE CREME",price:2500,unit:"BOITE"},
-{name:"KIT PERFUSION GELOFUSINE 4%",price:6000,unit:"KIT"},
-{name:"KIT PERFUSION GLUCOSE 5%",price:3000,unit:"KIT"},
-{name:"KIT PERFUSION METRONIDAZOLE",price:3000,unit:"KIT"},
-{name:"KIT PERFUSION NACL 0,9%",price:3000,unit:"KIT"},
-{name:"KIT PERFUSION RINGER",price:3000,unit:"KIT"},
-{name:"LOPERAMIDE GELULES 2MG",price:800,unit:"PLAQUETTE"},
+{name:"KIT PERFUSION GELOFUSINE 4%",price:6500,unit:"KIT"},
+{name:"KIT PERFUSION GLUCOSE 5%",price:4500,unit:"KIT"},
+{name:"KIT PERFUSION METRONIDAZOLE",price:4500,unit:"KIT"},
+{name:"KIT PERFUSION NACL 0,9%",price:4500,unit:"KIT"},
+{name:"KIT PERFUSION RINGER",price:5000,unit:"KIT"},
+{name:"LOPERAMIDE GELULES 2MG",price:1000,unit:"PLAQUETTE"},
 {name:"METRONIDAZOLE CP 500MG",price:1000,unit:"PLAQUETTE"},
 {name:"METRONIDAZOLE SUSP BUV 125MG",price:1500,unit:"BOITE"},
 {name:"NOVALGIN 2500MG INJ",price:500,unit:"1 ML"},
 {name:"OMEPRAZOLE 20MG GELULES",price:2500,unit:"BOITE"},
-{name:"PARACETAMOL 500MG CP",price:250,unit:"PLAQUETTE"},
+{name:"PARACETAMOL 500MG CP",price:200,unit:"PLAQUETTE"},
 {name:"PRIMALAN 30MG SP",price:2500,unit:"BOITE"},
 {name:"QUINEX 300MG CP",price:3500,unit:"BOITE"},
 {name:"RETARPEN 2.4 MUI INJECTION",price:1500,unit:"AMPOULE"},
 {name:"SAT (SERUM ANTI TETANIQUE) 1500UI",price:3000,unit:"AMPOULE"},
 {name:"SEPTILAIT SOLUTION",price:3000,unit:"BOITE"},
-{name:"SPASFON 80MG CP",price:1500,unit:"PLAQUETTE"},
+{name:"SPASFON 80MG CP",price:1000,unit:"PLAQUETTE"},
 {name:"TRAMADOL 100MG/2ML INJ",price:1500,unit:"AMPOULE"},
 {name:"TRAMADOL 50MG CP",price:1500,unit:"PLAQUETTE"},
 {name:"VITA C 1000 CP EFFERV",price:1500,unit:"BOITE"},
 {name:"VITAMINE C INJECTION",price:1000,unit:"AMPOULE"},
-{name:"VOGALENE 10MG INJECTION",price:800,unit:"AMPOULE"},
+{name:"VOGALENE 10MG INJECTION",price:1000,unit:"AMPOULE"},
 {name:"X-FERON SIROP 200ML",price:2000,unit:"FLACON"},
-{name:"YEKAFER SIROP 200ML",price:2000,unit:"FLACON"}
+{name:"YEKAFER SIROP 200ML",price:2000,unit:"FLACON"},
+{name:"FLUDIMAX SIROP 2%",price:1500,unit:"FLACON"},
+{name:"FLUDIMAX SIROP 5%",price:1500,unit:"FLACON"},
+{name:"FUCLO 500MG GELULES B/24",price:4500,unit:"BOITE"},
+{name:"CARNET DE SANTÉ INDIVIDUEL",price:500,unit:"UNITE"},
+{name:"LIDOCAINE 2% INJ",price:500,unit:"1 ML"},
+{name:"SOINS INFIRMIERS",price:500,unit:"ACTE"},
+{name:"PANSEMENT SIMPLE",price:500,unit:"ACTE"},
+{name:"MISE EN OBSERVATION",price:2000,unit:"ACTE"},
+{name:"FEUILLES DE COMPRESSES",price:100,unit:"UNITE"},
+{name:"TEST DE GROSSESSE",price:1000,unit:"UNITE"},
+{name:"PAIRES DE GANTS PROPRES",price:100,unit:"PAIRE"}
 ];
 
 medicaments.sort((a,b)=>a.name.localeCompare(b.name));
@@ -127,14 +138,6 @@ const resetFacture = document.getElementById("resetFacture");
 const search = document.getElementById("search");
 const medCounter = document.getElementById("medCounter");
 const clearBtn = document.getElementById("clearBtn");
-
-
-// ================= BOITE SUGGESTIONS =================
-
-const suggestions = document.createElement("div");
-suggestions.id = "suggestions";
-search.parentElement.appendChild(suggestions);
-
 
 // ================= TOTAL =================
 
@@ -389,18 +392,44 @@ factureTotal.style.transform="scale(1)";
 
 // ================= RESET =================
 
-resetFacture.onclick = ()=>{
+const confirmBox = document.getElementById("confirmBox");
+const btnOk = document.getElementById("btnOk");
+const btnCancel = document.getElementById("btnCancel");
 
-navigator.vibrate([120,50,120]);
+resetFacture.onclick = function(){
 
-factureList.innerHTML="";
-
-total = 0;
-
-factureTotal.innerText = "Total : 0 FCFA";
+confirmBox.style.display = "flex";
 
 };
 
+btnCancel.onclick = function(){
+
+confirmBox.style.display = "none";
+
+};
+
+btnOk.onclick = function(){
+
+confirmBox.style.display = "none";
+
+// animation disparition
+document.querySelectorAll("#factureList li").forEach((li,i)=>{
+
+setTimeout(()=>{
+li.classList.add("fadeOut");
+}, i*50);
+
+});
+
+setTimeout(()=>{
+
+factureList.innerHTML = "";
+total = 0;
+factureTotal.innerText = "Total : 0 FCFA";
+
+},400);
+
+};
 
 // ================= RECHERCHE =================
 
@@ -408,54 +437,25 @@ search.addEventListener("input", function(){
 
 let valeur = this.value.toLowerCase();
 
-// afficher ou cacher le bouton ❌
+// bouton clear
 clearBtn.style.display = valeur ? "block" : "none";
 
-// filtrer médicaments
+// filtrer
 let resultat = medicaments.filter(med =>
 med.name.toLowerCase().includes(valeur)
 );
 
 afficherListe(resultat);
 
-// suggestions
-suggestions.innerHTML = "";
-
-if(valeur){
-
-resultat.slice(0,5).forEach(med=>{
-
-let div = document.createElement("div");
-
-div.className = "suggestion";
-
-div.textContent = med.name;
-
-div.onclick = ()=>{
-
-search.value = med.name;
-clearBtn.style.display = "block";
-
-suggestions.innerHTML = "";
-
-ajouterFacture(med);
-
-};
-
-suggestions.appendChild(div);
-
 });
 
-}
 
-});
 // ================= CLEAR =================
 
 clearBtn.onclick = ()=>{
 
 search.value="";
 clearBtn.style.display="none";
-suggestions.innerHTML="";
 afficherListe(medicaments);
 
 };
@@ -631,16 +631,19 @@ startY = e.touches[0].clientY;
 
 factureBox.addEventListener("touchmove",(e)=>{
 
+// si on touche la liste, on ne déclenche pas le slide
+if(e.target.closest("#factureList")){
+return;
+}
+
 let currentY = e.touches[0].clientY;
 
 let diff = startY - currentY;
 
-// glisser vers le haut
 if(diff > 50){
 factureBox.classList.add("open");
 }
 
-// glisser vers le bas
 if(diff < -50){
 factureBox.classList.remove("open");
 }
@@ -666,6 +669,26 @@ e.stopPropagation();
 }, { passive:true });
 
 }
+
+document.addEventListener("DOMContentLoaded", function(){
+
+const toggleFacture = document.getElementById("toggleFacture");
+const factureBox = document.getElementById("factureBox");
+
+toggleFacture.onclick = ()=>{
+
+factureBox.classList.toggle("open");
+
+if(factureBox.classList.contains("open")){
+toggleFacture.innerText = "🙈 Masquer facture";
+}else{
+toggleFacture.innerText = "👁️ Afficher facture";
+}
+
+};
+
+});
+
 // ================= LANCEMENT =================
 
 afficherListe(medicaments);
