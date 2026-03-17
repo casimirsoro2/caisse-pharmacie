@@ -83,6 +83,7 @@
 
 <div id="factureBox">
   <div id="factureHandle"></div>
+  <button id="toggleFacture">👁️ Afficher facture</button>
 
 <h2>🧾 FACTURE CLIENT</h2>
 
@@ -90,14 +91,27 @@
 
 <div id="factureTotal">Total : 0 FCFA</div>
 
-<button id="resetFacture">Réinitialiser</button>
+<button type="button" id="resetFacture">🗑️ Réinitialiser</button>
 
 </div>
 
+<div id="confirmBox">
 
+<div class="confirmContent">
+
+<p>Voulez-vous vraiment réinitialiser la facture ?</p>
+
+<div class="confirmButtons">
+<button id="btnCancel">Annuler</button>
+<button id="btnOk">OK</button>
+</div>
+
+</div>
+
+</div>
 <!-- ================= JS ================= -->
 
-<script src="script.js"></script>
+<script src="js/script.js"></script>
 
 </body>
 </html>
